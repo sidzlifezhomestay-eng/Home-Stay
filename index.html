@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeakCraft Web Studio | Zero-Monthly-Fee Websites for Local Businesses</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            obsidian: {
+              800: '#111827',
+              900: '#0b0f19',
+              950: '#060911',
+            },
+            brand: {
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-16 md:pb-0">
+
+  <!-- Top Trust & Offer Bar -->
+  <div class="bg-obsidian-950 text-slate-300 text-xs py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="bg-gold-500/20 text-gold-400 border border-gold-500/30 font-bold px-2.5 py-0.5 rounded-full">
+          ₹0 Monthly Hosting Forever
+        </span>
+        <span class="hidden sm:inline">Custom Websites, WhatsApp Stores & Booking Portals</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+919856701460" class="hover:text-gold-400 font-semibold transition">
+          <i class="fa-solid fa-phone text-gold-400 mr-1"></i> +91 98567 01460
+        </a>
+        <a href="https://wa.me/919856701460?text=Hi%20PeakCraft%20Web%20Studio,%20I%20want%20a%20website%20for%20my%20business." target="_blank" class="text-emerald-400 font-bold hover:underline">
+          <i class="fa-brands fa-whatsapp mr-1"></i> Live Chat
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 py-3.5 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-obsidian-900 text-gold-400 flex items-center justify-center font-display text-lg font-bold shadow-sm border border-gold-500/40">
+          <i class="fa-solid fa-mountain-sun"></i>
+        </div>
+        <div>
+          <span class="block font-display text-lg sm:text-xl font-bold text-obsidian-950 leading-none">PeakCraft</span>
+          <span class="block text-[10px] uppercase tracking-widest text-brand-600 font-extrabold mt-0.5">Web Studio</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#work" class="hover:text-brand-600 transition">Live Demos</a>
+        <a href="#why-us" class="hover:text-brand-600 transition">Why Zero Monthly Fees?</a>
+        <a href="#calculator" class="hover:text-brand-600 transition">Instant Quote</a>
+        <a href="#pricing" class="hover:text-brand-600 transition">Packages</a>
+      </nav>
+
+      <a href="https://wa.me/919856701460?text=Hi%20PeakCraft%20Web%20Studio!%20I%20would%20like%20to%20see%20a%20free%20website%20demo%20for%20my%20business." target="_blank" class="bg-obsidian-900 hover:bg-brand-600 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+        <span>Book Free Demo</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-obsidian-950 text-white relative overflow-hidden py-20 sm:py-28 px-4 border-b-4 border-gold-500">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 bg-white/5 border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-semibold text-gold-400">
+          <i class="fa-solid fa-bolt"></i> Built for Homestays, Cafes, Shops & Institutions
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          Turn Visitors Into Direct <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-300">WhatsApp Orders & Bookings.</span>
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+          Stop paying 20% commission to booking apps or ₹2,000/month for slow website builders. We build ultra-fast, mobile-first websites with **₹0 monthly hosting costs forever**.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#work" class="bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-extrabold px-6 py-3.5 rounded-xl shadow-lg transition text-sm flex items-center gap-2">
+            <span>Explore Live Industry Demos</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#calculator" class="bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold px-6 py-3.5 rounded-xl transition text-sm">
+            Calculate Your Price
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 text-center sm:text-left">
+          <div>
+            <p class="font-display text-2xl sm:text-3xl font-bold text-white">₹0/mo</p>
+            <p class="text-xs text-slate-400">Cloud Hosting Fee</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl sm:text-3xl font-bold text-gold-400">0%</p>
+            <p class="text-xs text-slate-400">Order Commission</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl sm:text-3xl font-bold text-emerald-400">3–5 Days</p>
+            <p class="text-xs text-slate-400">Fast Turnaround</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Hero Feature Highlights Card -->
+      <div class="lg:col-span-5 bg-obsidian-900 border border-slate-800 p-6 sm:p-8 rounded-3xl shadow-2xl space-y-6">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-400">The PeakCraft Advantage</span>
+            <h2 class="font-display text-xl font-bold text-white mt-0.5">Everything Included Out of the Box</h2>
+          </div>
+          <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full">100% Ownership</span>
+        </div>
+
+        <ul class="space-y-4 text-sm text-slate-300">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <div>
+              <strong class="text-white block">Direct WhatsApp Checkout & Booking Engine</strong>
+              Customers select rooms, dishes, or products and send itemized orders straight to your phone.
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <div>
+              <strong class="text-white block">Google Search & Google Maps SEO Setup</strong>
+              We submit your sitemap to Google and connect your website button to your local Maps pin.
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <div>
+              <strong class="text-white block">Printable QR Code Standee & Menu Kit</strong>
+              Ready-to-print A4 QR posters for your reception counter, restaurant tables, or packaging.
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <div>
+              <strong class="text-white block">Easy Staff Admin Panel</strong>
+              Update prices, photos, notices, and stock from your mobile or computer anytime.
+            </div>
+          </li>
+        </ul>
+
+        <a href="https://wa.me/919856701460?text=Hi%20PeakCraft%20Web%20Studio,%20I%20want%20to%20discuss%20building%20a%20website." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl shadow transition flex items-center justify-center gap-2 text-sm">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Chat on WhatsApp (+91 98567 01460)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Portfolio & Demos Section -->
+  <section id="work" class="max-w-7xl mx-auto px-4 py-16 sm:py-20 space-y-12">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600">Proven Live Demos</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-obsidian-950 mt-1">
+        Click & Test Our Live Industry Websites
+      </h2>
+      <p class="text-sm sm:text-base text-slate-600 mt-2">
+        Don't just take our word for it—interact with our real production builds and live templates below.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Demo 1: Homestay & Cafe -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition flex flex-col justify-between group">
+        <div>
+          <div class="relative h-56 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Homestay & Cafe Demo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 bg-emerald-900/90 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">Hospitality & Cafes</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-obsidian-950">Pinewood Mist Homestay & Cafe</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Complete resort & cafe portal featuring an automatic check-in nights price calculator, interactive digital table menu, and direct WhatsApp reservation slip.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-4 text-[11px] font-semibold text-slate-600">
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Room Calculator</span>
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Digital Menu</span>
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Photo Lightbox</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 pt-0 flex gap-3">
+          <a href="homestay-cafe-template.html" target="_blank" class="flex-1 bg-obsidian-900 hover:bg-brand-600 text-white text-xs font-bold py-3 rounded-xl text-center transition">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Open Live Demo
+          </a>
+          <button onclick="inquireDemo('Homestay & Cafe Website')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-bold px-3.5 py-3 rounded-xl transition">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Demo 2: E-Commerce & Boutique -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition flex flex-col justify-between group">
+        <div>
+          <div class="relative h-56 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80" alt="Boutique E-Commerce Store" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 bg-pink-700/90 text-white text-xs font-bold px-3 py-1 rounded-full">Retail & E-Commerce</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-obsidian-950">Artisan Crochet & Boutique Store</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Codeless online shopping storefront with category filters, price sorting, multi-photo zoom sliders, promo codes, UPI payment option, and WhatsApp cart checkout.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-4 text-[11px] font-semibold text-slate-600">
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Slide-Out Cart</span>
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Promo Codes</span>
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Visual Admin</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 pt-0 flex gap-3">
+          <button onclick="inquireDemo('Boutique E-Commerce Storefront')" class="flex-1 bg-obsidian-900 hover:bg-brand-600 text-white text-xs font-bold py-3 rounded-xl text-center transition">
+            <i class="fa-brands fa-whatsapp mr-1"></i> Request Store Demo
+          </button>
+        </div>
+      </div>
+
+      <!-- Demo 3: School & Educational Institution -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200 transition flex flex-col justify-between group">
+        <div>
+          <div class="relative h-56 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="School Website Portal" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <span class="absolute top-3 left-3 bg-blue-900/90 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">Schools & Institutes</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-obsidian-950">Bhanu Bhakta Sec. School Portal</h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Full institutional web portal featuring live scrolling notice tickers, wing-wise PDF syllabus downloads, roll-number student marksheet checker, and staff CMS login.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-4 text-[11px] font-semibold text-slate-600">
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Online Marksheets</span>
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Staff CMS</span>
+              <span class="bg-slate-100 px-2.5 py-1 rounded">✓ Notice Ticker</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 pt-0 flex gap-3">
+          <a href="https://bhanu-bhakta-school.netlify.app" target="_blank" class="flex-1 bg-obsidian-900 hover:bg-brand-600 text-white text-xs font-bold py-3 rounded-xl text-center transition">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Visit Live School Site
+          </a>
+          <button onclick="inquireDemo('School / Coaching Institute Portal')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-bold px-3.5 py-3 rounded-xl transition">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Zero Monthly Fees Comparison Section -->
+  <section id="why-us" class="bg-obsidian-900 text-white py-16 px-4">
+    <div class="max-w-6xl mx-auto space-y-10">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Smart Business Math</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-1">Keep 100% of Your Profits</h2>
+        <p class="text-sm text-slate-300 mt-2">See how much your business saves every single year with PeakCraft's modern static cloud architecture.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-red-950/30 border border-red-500/30 p-6 sm:p-8 rounded-2xl space-y-4">
+          <span class="bg-red-500/20 text-red-300 text-xs font-bold px-3 py-1 rounded-full">Traditional Agencies & App Platforms</span>
+          <h3 class="font-display text-2xl font-bold text-white">₹24,000 to ₹45,000+ Lost Every Year</h3>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-xmark text-red-400"></i> ₹1,500–₹2,500/month recurring hosting & builder fees</li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-xmark text-red-400"></i> 15% to 25% commission cut on every room or food order</li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-xmark text-red-400"></i> Slow database servers that crash or get hacked</li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-xmark text-red-400"></i> Extra charges for SSL security certificates</li>
+          </ul>
+        </div>
+
+        <div class="bg-emerald-950/30 border-2 border-emerald-500/50 p-6 sm:p-8 rounded-2xl space-y-4">
+          <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full">PeakCraft Web Studio Architecture</span>
+          <h3 class="font-display text-2xl font-bold text-white">Pay Once. ₹0 Monthly Hosting Forever.</h3>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Hosted on global cloud CDNs with ₹0 monthly hosting bills</li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> 0% commission—customers pay you directly via UPI/Cash</li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Instant loading speed on 4G/5G mobile networks</li>
+            <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Free lifetime SSL (HTTPS) lock and Google Maps integration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Cost & Savings Calculator -->
+  <section id="calculator" class="max-w-5xl mx-auto px-4 py-16">
+    <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 sm:p-10">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600">Instant Estimate Tool</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-obsidian-950 mt-1">Build Your Custom Website Package</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Select your business type and features below to see your exact one-time price.</p>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7 space-y-5 text-sm">
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">1. Select Your Business Type</label>
+            <select id="calc-type" onchange="runQuoteCalc()" class="w-full rounded-xl border border-slate-300 px-4 py-3 font-semibold bg-slate-50 focus:outline-none focus:border-brand-600">
+              <option value="3999" data-label="Local Business / Clinic / Salon Landing Page">Local Service / Clinic / Salon (Base: ₹3,999)</option>
+              <option value="7499" data-label="Homestay / Resort & Cafe Booking Portal" selected>Homestay / Hotel & Cafe Portal (Base: ₹7,499)</option>
+              <option value="7499" data-label="Boutique / Retail WhatsApp E-Commerce Store">Retail / E-Commerce WhatsApp Store (Base: ₹7,499)</option>
+              <option value="11999" data-label="School / Coaching Institute Full Web Portal">School / Educational Portal + Marksheets (Base: ₹11,999)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-700 mb-2">2. Optional Power Add-Ons</label>
+            <div class="space-y-2.5">
+              <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                <span class="flex items-center gap-2.5 font-medium">
+                  <input type="checkbox" id="addon-admin" value="1500" onchange="runQuoteCalc()" class="w-4 h-4 accent-brand-600" />
+                  <span>Easy Staff `/admin` Dashboard (Self-Edit Photos & Prices)</span>
+                </span>
+                <span class="font-bold text-obsidian-900">+₹1,500</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                <span class="flex items-center gap-2.5 font-medium">
+                  <input type="checkbox" id="addon-qr" value="500" checked onchange="runQuoteCalc()" class="w-4 h-4 accent-brand-600" />
+                  <span>Printable QR Code Standee + Google Maps Setup</span>
+                </span>
+                <span class="font-bold text-obsidian-900">+₹500</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                <span class="flex items-center gap-2.5 font-medium">
+                  <input type="checkbox" id="addon-domain" value="900" onchange="runQuoteCalc()" class="w-4 h-4 accent-brand-600" />
+                  <span>Custom `.in` or `.com` Domain Registration (1 Year)</span>
+                </span>
+                <span class="font-bold text-obsidian-900">+₹900</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">3. Your Business Name</label>
+            <input type="text" id="calc-biz-name" placeholder="e.g. Hills View Homestay / City Bakehouse" class="w-full rounded-xl border border-slate-300 px-4 py-2.5 focus:outline-none focus:border-brand-600" />
+          </div>
+        </div>
+
+        <!-- Quote Output Card -->
+        <div class="md:col-span-5 bg-obsidian-950 text-white p-6 sm:p-7 rounded-2xl space-y-5 border-2 border-gold-500">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Estimated One-Time Investment</span>
+            <p class="font-display text-4xl font-bold text-white mt-1" id="calc-total">₹7,999</p>
+            <p class="text-xs text-emerald-400 font-semibold mt-1">✓ ₹0 Monthly Hosting • No Hidden Fees</p>
+          </div>
+
+          <div class="bg-white/5 p-3.5 rounded-xl border border-white/10 text-xs space-y-1.5 text-slate-300">
+            <p class="font-bold text-white">Estimated Annual Savings: <span class="text-gold-400">₹18,000+/yr</span></p>
+            <p>Delivered ready-to-use in <strong>3 to 5 business days</strong> with WhatsApp integration.</p>
+          </div>
+
+          <button onclick="sendQuoteToWhatsApp()" class="w-full bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-extrabold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Claim This Quote on WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Tier Transparent Pricing Section -->
+  <section id="pricing" class="max-w-7xl mx-auto px-4 py-12 space-y-10">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-brand-600">Clear One-Time Packages</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-obsidian-950 mt-1">Simple, Honest Local Pricing</h2>
+      <p class="text-sm text-slate-600 mt-1">50% advance to start, 50% only after you test and approve your live website.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Tier 1 -->
+      <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase text-slate-400">Starter Launchpad</span>
+          <h3 class="font-display text-2xl font-bold text-obsidian-950 mt-1">Business Landing Page</h3>
+          <p class="font-display text-3xl font-bold text-obsidian-950 mt-4">₹3,999 <span class="text-xs font-normal text-slate-500">one-time</span></p>
+          <p class="text-xs text-emerald-700 font-bold mt-1">₹0 Monthly Hosting Fee</p>
+          <ul class="space-y-2.5 text-xs text-slate-600 mt-6 border-t border-slate-100 pt-5">
+            <li>✓ Premium 1-Page Mobile-First Design</li>
+            <li>✓ Services / Menu / Price Showcase</li>
+            <li>✓ Direct WhatsApp Enquiry & Call Bar</li>
+            <li>✓ Photo Gallery + Embedded Google Map</li>
+            <li>✓ Printable Reception QR Code Poster</li>
+          </ul>
+        </div>
+        <button onclick="inquireDemo('Starter Launchpad (₹3,999)')" class="mt-8 w-full bg-slate-900 hover:bg-brand-600 text-white font-bold text-xs py-3 rounded-xl transition">
+          Choose Starter Plan
+        </button>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="bg-obsidian-950 text-white p-7 rounded-2xl shadow-xl border-2 border-gold-500 flex flex-col justify-between relative">
+        <span class="absolute -top-3 right-6 bg-gold-500 text-obsidian-950 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">Most Popular</span>
+        <div>
+          <span class="text-xs font-bold uppercase text-gold-400">Growth Store / Booking</span>
+          <h3 class="font-display text-2xl font-bold mt-1">Homestay, Cafe or Shop</h3>
+          <p class="font-display text-3xl font-bold text-gold-400 mt-4">₹7,499 <span class="text-xs font-normal text-slate-400">one-time</span></p>
+          <p class="text-xs text-emerald-400 font-bold mt-1">0% Commission • ₹0 Monthly Hosting</p>
+          <ul class="space-y-2.5 text-xs text-slate-300 mt-6 border-t border-slate-800 pt-5">
+            <li>✓ Everything in Starter + Multi-Category Filters</li>
+            <li>✓ Room Tariff Calculator OR Slide-Out Cart</li>
+            <li>✓ Interactive Digital Cafe Menu / Product Zoom</li>
+            <li>✓ Google Search Console & Maps SEO Indexing</li>
+            <li>✓ Printable Table / Diary QR Code Kit</li>
+          </ul>
+        </div>
+        <button onclick="inquireDemo('Growth Store / Homestay Package (₹7,499)')" class="mt-8 w-full bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-extrabold text-xs py-3.5 rounded-xl transition">
+          Choose Growth Plan
+        </button>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase text-brand-600">Institutional Pro</span>
+          <h3 class="font-display text-2xl font-bold text-obsidian-950 mt-1">School or Custom Portal</h3>
+          <p class="font-display text-3xl font-bold text-obsidian-950 mt-4">₹11,999 <span class="text-xs font-normal text-slate-500">one-time</span></p>
+          <p class="text-xs text-emerald-700 font-bold mt-1">Includes Staff Admin Dashboard</p>
+          <ul class="space-y-2.5 text-xs text-slate-600 mt-6 border-t border-slate-100 pt-5">
+            <li>✓ 6-Page Custom Institutional Architecture</li>
+            <li>✓ Invite-Only `/admin` Staff Login Panel</li>
+            <li>✓ Live Noticeboard + PDF Syllabus Library</li>
+            <li>✓ Online Student Result & Marksheet Portal</li>
+            <li>✓ Offline Word/Excel Bulk Converter Tool</li>
+          </ul>
+        </div>
+        <button onclick="inquireDemo('Institutional Pro Plan (₹11,999)')" class="mt-8 w-full bg-slate-900 hover:bg-brand-600 text-white font-bold text-xs py-3 rounded-xl transition">
+          Choose Institutional Pro
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian-950 text-slate-400 py-10 px-4 text-center text-xs border-t-4 border-gold-500 mt-12">
+    <div class="max-w-7xl mx-auto space-y-2">
+      <p class="font-display text-base font-bold text-white">PeakCraft Web Studio • Shillong, Meghalaya</p>
+      <p>Call / WhatsApp: <a href="https://wa.me/919856701460" class="text-gold-400 font-bold">+91 98567 01460</a></p>
+      <p class="text-slate-500 pt-2">© <span id="year"></span> PeakCraft Web Studio. Empowering Local Businesses with Zero-Monthly-Fee Technology.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Sticky Bar -->
+  <div class="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 grid grid-cols-3 py-2.5 px-2 text-center text-xs font-bold text-slate-800 md:hidden z-50 shadow-lg">
+    <a href="tel:+919856701460" class="flex flex-col items-center gap-1">
+      <i class="fa-solid fa-phone text-brand-600"></i>
+      <span>Call Studio</span>
+    </a>
+    <a href="#work" class="flex flex-col items-center gap-1">
+      <i class="fa-solid fa-laptop-code text-amber-600"></i>
+      <span>Live Demos</span>
+    </a>
+    <a href="https://wa.me/919856701460?text=Hi%20PeakCraft%20Web%20Studio,%20I%20want%20a%20free%20demo%20for%20my%20business." class="flex flex-col items-center gap-1 text-emerald-700">
+      <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+      <span>WhatsApp Us</span>
+    </a>
+  </div>
+
+  <script>
+    const STUDIO_WA = "919856701460";
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function runQuoteCalc() {
+      const base = Number(document.getElementById('calc-type').value) || 7499;
+      const admin = document.getElementById('addon-admin').checked ? 1500 : 0;
+      const qr = document.getElementById('addon-qr').checked ? 500 : 0;
+      const dom = document.getElementById('addon-domain').checked ? 900 : 0;
+      const total = base + admin + qr + dom;
+      document.getElementById('calc-total').textContent = `₹${total.toLocaleString('en-IN')}`;
+      return total;
+    }
+
+    function sendQuoteToWhatsApp() {
+      const typeSel = document.getElementById('calc-type');
+      const pkgName = typeSel.options[typeSel.selectedIndex].dataset.label;
+      const bizName = document.getElementById('calc-biz-name').value.trim() || "My Local Business";
+      const total = runQuoteCalc().toLocaleString('en-IN');
+
+      const addons = [];
+      if (document.getElementById('addon-admin').checked) addons.push("Staff Admin Dashboard");
+      if (document.getElementById('addon-qr').checked) addons.push("QR Standee & Google Maps SEO");
+      if (document.getElementById('addon-domain').checked) addons.push("Custom Domain (.in/.com)");
+
+      const msg = `*Website Quote Enquiry - PeakCraft Web Studio*%0A*Business Name:* ${encodeURIComponent(bizName)}%0A*Selected Package:* ${encodeURIComponent(pkgName)}%0A*Add-Ons:* ${encodeURIComponent(addons.join(', ') || 'Standard')}%0A*Estimated One-Time Total:* ₹${total}%0A%0APlease share a live demo for my business!`;
+      window.open(`https://wa.me/${STUDIO_WA}?text=${msg}`, '_blank');
+    }
+
+    function inquireDemo(itemName) {
+      const msg = `*Enquiry for ${encodeURIComponent(itemName)}*%0AHi PeakCraft Web Studio, I checked your portfolio and would like to see how this works for my business.`;
+      window.open(`https://wa.me/${STUDIO_WA}?text=${msg}`, '_blank');
+    }
+
+    runQuoteCalc();
+  </script>
+</body>
+</html>
