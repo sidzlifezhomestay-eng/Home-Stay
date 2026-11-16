@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cherrry bean Café, Shillong | Digital QR Menu & Pre-Order</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Fraunces"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            espresso: {
+              800: '#3e2723',
+              900: '#271714',
+              950: '#180d0b',
+            },
+            terracotta: {
+              500: '#ea580c',
+              600: '#c2410c',
+            },
+            latte: '#fdf8f5'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-latte text-slate-800 font-sans antialiased pb-24">
+
+  <!-- Top Bar -->
+  <div class="bg-espresso-950 text-amber-100/90 text-xs py-2 px-4 border-b border-espresso-800">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="bg-terracotta-500 text-white font-bold px-2.5 py-0.5 rounded-full text-[11px]">
+          <i class="fa-solid fa-qrcode mr-1"></i> Smart QR Table Menu & Takeaway
+        </span>
+        <span class="hidden sm:inline"><i class="fa-solid fa-clock text-amber-400 mr-1"></i> Open Daily: 8:30 AM – 9:30 PM</span>
+      </div>
+      <a href="index.html" class="text-amber-400 hover:underline font-bold">
+        ← Back to PeakCraft Studio
+      </a>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl bg-espresso-900 text-amber-400 flex items-center justify-center text-xl shadow-sm">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <div>
+          <span class="block font-serif text-lg sm:text-xl font-bold text-espresso-950 leading-none">Cherrry bean Café</span>
+          <span class="block text-[11px] uppercase tracking-widest text-terracotta-600 font-extrabold mt-0.5">Shillong</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-bold text-stone-600">
+        <a href="#menu" class="hover:text-terracotta-600 transition">Digital Menu</a>
+        <a href="#specials" class="hover:text-terracotta-600 transition">Chef Specials</a>
+        <a href="#book-table" class="hover:text-terracotta-600 transition">Book a Table</a>
+        <a href="#location" class="hover:text-terracotta-600 transition">Location</a>
+      </nav>
+
+      <button onclick="openCartModal()" class="relative bg-espresso-900 hover:bg-terracotta-600 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl shadow transition flex items-center gap-2">
+        <i class="fa-solid fa-bag-shopping text-amber-400"></i>
+        <span>Your Order</span>
+        <span id="header-cart-count" class="bg-terracotta-500 text-white text-[11px] font-extrabold px-2 py-0.5 rounded-full">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="relative bg-espresso-950 text-white overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80"
+      onerror="this.src='https://placehold.co/1600x700/271714/fbbf24?text=Cloudberry+Roastery+Cafe'"
+      alt="Cloudberry Cafe Interior"
+      class="absolute inset-0 w-full h-full object-cover opacity-35"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-espresso-950 via-espresso-950/60 to-transparent"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-8 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-amber-300">
+          <i class="fa-solid fa-fire-flame-curved"></i> Freshly Roasted Hill Coffee & Wood-Fired Kitchen
+        </div>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          Order From Your Table or Pre-Book for Pickup.
+        </h1>
+        <p class="text-stone-200 text-sm sm:text-base max-w-xl leading-relaxed">
+          Skip the queue. Browse our live menu below, customize your order, and send it straight to our barista & kitchen counter via WhatsApp with zero app fees.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#menu" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm">
+            <i class="fa-solid fa-utensils mr-1.5"></i> Browse Menu & Order
+          </a>
+          <a href="#book-table" class="bg-white/15 hover:bg-white/25 border border-white/25 text-white font-bold px-6 py-3.5 rounded-xl transition text-sm">
+            Reserve a Table
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Cafe Info Card -->
+      <div class="md:col-span-4 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl space-y-4 text-xs">
+        <div class="flex items-center justify-between border-b border-white/15 pb-3">
+          <span class="font-bold text-amber-300 uppercase tracking-wider">Kitchen Status</span>
+          <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-bold px-2.5 py-0.5 rounded-full">● Accepting Orders</span>
+        </div>
+        <div class="space-y-2.5 text-stone-200">
+          <p class="flex items-center gap-2.5"><i class="fa-solid fa-chair text-amber-400 w-4"></i> <strong>Dine-In:</strong> Scan table QR & select your table number</p>
+          <p class="flex items-center gap-2.5"><i class="fa-solid fa-bag-shopping text-amber-400 w-4"></i> <strong>Takeaway:</strong> Ready in 15–20 mins</p>
+          <p class="flex items-center gap-2.5"><i class="fa-solid fa-wifi text-amber-400 w-4"></i> <strong>Free Wi-Fi:</strong> Cloudberry_Guest</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Digital Menu Section -->
+  <section id="menu" class="max-w-6xl mx-auto px-4 py-12 space-y-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stone-200 pb-6">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-terracotta-600">Live Kitchen Catalog</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-950 mt-1">Interactive Cafe Menu</h2>
+      </div>
+
+      <!-- Search & Veg Filter -->
+      <div class="flex flex-wrap items-center gap-3">
+        <div class="relative flex-1 sm:w-56">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-stone-400 text-xs"></i>
+          <input
+            type="text"
+            id="menu-search"
+            oninput="renderMenu()"
+            placeholder="Search coffee, pizza, cake..."
+            class="w-full pl-9 pr-3 py-2 rounded-xl border border-stone-300 text-xs bg-white focus:outline-none focus:border-espresso-900"
+          />
+        </div>
+        <label class="flex items-center gap-2 bg-white border border-stone-300 px-3.5 py-2 rounded-xl text-xs font-bold cursor-pointer select-none">
+          <input type="checkbox" id="veg-only" onchange="renderMenu()" class="accent-emerald-600 w-3.5 h-3.5" />
+          <span class="text-emerald-700">🌱 Pure Veg Only</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Category Pills -->
+    <div class="flex gap-2 overflow-x-auto pb-2" id="category-tabs">
+      <button onclick="setCategory('All')" data-cat="All" class="cat-btn shrink-0 bg-espresso-900 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">All Items</button>
+      <button onclick="setCategory('Coffee & Beverages')" data-cat="Coffee & Beverages" class="cat-btn shrink-0 bg-white border border-stone-200 text-stone-700 hover:bg-stone-100 text-xs font-bold px-4 py-2.5 rounded-xl transition">☕ Coffee & Beverages</button>
+      <button onclick="setCategory('All-Day Breakfast')" data-cat="All-Day Breakfast" class="cat-btn shrink-0 bg-white border border-stone-200 text-stone-700 hover:bg-stone-100 text-xs font-bold px-4 py-2.5 rounded-xl transition">🥞 All-Day Breakfast</button>
+      <button onclick="setCategory('Wood-Fired & Mains')" data-cat="Wood-Fired & Mains" class="cat-btn shrink-0 bg-white border border-stone-200 text-stone-700 hover:bg-stone-100 text-xs font-bold px-4 py-2.5 rounded-xl transition">🍕 Wood-Fired & Mains</button>
+      <button onclick="setCategory('Artisan Bakery')" data-cat="Artisan Bakery" class="cat-btn shrink-0 bg-white border border-stone-200 text-stone-700 hover:bg-stone-100 text-xs font-bold px-4 py-2.5 rounded-xl transition">🥐 Artisan Bakery</button>
+    </div>
+
+    <!-- Menu Grid -->
+    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Table Reservation Section -->
+  <section id="book-table" class="bg-espresso-900 text-white py-14 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-6 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Zero Waiting Time</span>
+        <h2 class="font-serif text-3xl font-bold">Reserve a Cozy Corner Table</h2>
+        <p class="text-sm text-stone-300 leading-relaxed">
+          Planning a birthday brunch, acoustic evening date, or remote work session? Book your table on WhatsApp in 10 seconds.
+        </p>
+        <div class="space-y-2 text-xs text-amber-200/90 pt-2">
+          <p><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Rooftop Valley View & Indoor Fireplace Seating</p>
+          <p><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Custom Birthday Cakes Available on Pre-Order</p>
+          <p><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Plug Points & High-Speed Fiber Wi-Fi at Every Booth</p>
+        </div>
+      </div>
+
+      <form onsubmit="sendTableBooking(event)" class="md:col-span-6 bg-white text-slate-800 p-6 rounded-2xl shadow-xl space-y-4 text-xs sm:text-sm">
+        <h3 class="font-serif text-lg font-bold text-espresso-950 border-b border-stone-100 pb-2">Instant Table Booking</h3>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-stone-600 mb-1">Your Name *</label>
+            <input type="text" id="res-name" required placeholder="e.g. Neha Lyngdoh" class="w-full rounded-xl border border-stone-300 px-3 py-2" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-600 mb-1">Number of Guests *</label>
+            <select id="res-guests" class="w-full rounded-xl border border-stone-300 px-3 py-2 bg-stone-50 font-semibold">
+              <option value="2 Guests">2 Guests</option>
+              <option value="3-4 Guests">3–4 Guests</option>
+              <option value="5-8 Guests (Group)">5–8 Guests (Group Table)</option>
+              <option value="10+ Guests (Party)">10+ Guests (Private Area)</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-stone-600 mb-1">Date *</label>
+            <input type="date" id="res-date" required class="w-full rounded-xl border border-stone-300 px-3 py-2" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-600 mb-1">Preferred Time *</label>
+            <input type="time" id="res-time" value="17:00" required class="w-full rounded-xl border border-stone-300 px-3 py-2" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-stone-600 mb-1">Seating Preference / Special Note</label>
+          <input type="text" id="res-note" placeholder="e.g. Window table, rooftop, birthday cake..." class="w-full rounded-xl border border-stone-300 px-3 py-2" />
+        </div>
+        <button type="submit" class="w-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold py-3 rounded-xl shadow transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Confirm Table via WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center">
+    <div class="space-y-3">
+      <span class="text-xs font-bold uppercase tracking-widest text-terracotta-600">Visit Us Today</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-950">Cloudberry Roastery & Bakehouse</h2>
+      <p class="text-xs sm:text-sm text-stone-600">Main Café Street, Laitumkhrah, Shillong, Meghalaya – 793003</p>
+      <p class="text-xs sm:text-sm text-stone-600"><strong>Order Desk:</strong> +91 98567 01460</p>
+    </div>
+    <div class="rounded-2xl overflow-hidden shadow-sm border border-stone-200 h-56">
+      <iframe
+        title="Cafe Location"
+        src="https://www.google.com/maps?q=Laitumkhrah,Shillong,Meghalaya&output=embed"
+        class="w-full h-full border-0"
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Floating Bottom Cart Bar -->
+  <div id="bottom-cart-bar" class="fixed bottom-0 inset-x-0 bg-espresso-950 text-white p-3.5 shadow-2xl border-t-2 border-terracotta-500 z-40">
+    <div class="max-w-6xl mx-auto flex justify-between items-center gap-4">
+      <div>
+        <p class="text-xs sm:text-sm font-extrabold text-amber-400" id="bar-summary">0 Items in Tray • ₹0</p>
+        <p class="text-[11px] text-stone-300">Tap "+ Add" on any item to build your Dine-In or Takeaway order</p>
+      </div>
+      <button onclick="openCartModal()" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl shadow transition flex items-center gap-2 shrink-0">
+        <span>View Tray & Checkout</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Slide-Out / Modal Checkout Tray -->
+  <div id="cart-modal" class="fixed inset-0 bg-black/75 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white text-slate-800 w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div class="bg-espresso-900 text-white p-5 flex justify-between items-center">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400">Direct WhatsApp Checkout</span>
+          <h3 class="font-serif text-xl font-bold">Your Cafe Order Tray</h3>
+        </div>
+        <button onclick="closeCartModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-5 overflow-y-auto space-y-5 flex-1 text-xs sm:text-sm">
+        <!-- Cart Items List -->
+        <div id="modal-cart-items" class="space-y-3 divide-y divide-stone-100"></div>
+
+        <!-- Order Type Selector -->
+        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 space-y-3">
+          <label class="block text-xs font-extrabold uppercase text-stone-700">1. Select Order Type</label>
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" id="btn-dinein" onclick="setOrderMode('Dine-In')" class="py-2.5 px-3 rounded-xl font-bold text-xs bg-espresso-900 text-white transition">
+              🍽️ Dine-In (Table QR)
+            </button>
+            <button type="button" id="btn-takeaway" onclick="setOrderMode('Takeaway')" class="py-2.5 px-3 rounded-xl font-bold text-xs bg-white border border-stone-300 text-stone-700 transition">
+              🛍️ Takeaway / Pickup
+            </button>
+          </div>
+
+          <div id="table-input-box">
+            <label class="block text-xs font-bold text-stone-600 mb-1">Select Your Table Number *</label>
+            <select id="customer-table" class="w-full rounded-xl border border-stone-300 px-3 py-2 bg-white font-semibold">
+              <option value="Table 1 (Window)">Table 1 (Window)</option>
+              <option value="Table 2 (Window)">Table 2 (Window)</option>
+              <option value="Table 3 (Indoor Booth)">Table 3 (Indoor Booth)</option>
+              <option value="Table 4 (Indoor Booth)">Table 4 (Indoor Booth)</option>
+              <option value="Table 5 (Garden Courtyard)">Table 5 (Garden Courtyard)</option>
+              <option value="Table 6 (Rooftop)">Table 6 (Rooftop)</option>
+            </select>
+          </div>
+
+          <div id="takeaway-input-box" class="hidden">
+            <label class="block text-xs font-bold text-stone-600 mb-1">Pickup Time *</label>
+            <input type="text" id="pickup-time" placeholder="e.g. In 20 mins / 5:30 PM" class="w-full rounded-xl border border-stone-300 px-3 py-2 bg-white" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-600 mb-1">Your Name *</label>
+            <input type="text" id="order-cust-name" placeholder="Enter your name" class="w-full rounded-xl border border-stone-300 px-3 py-2 bg-white" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-600 mb-1">Cooking Note (Optional)</label>
+            <input type="text" id="order-note" placeholder="e.g. Less sugar, extra spicy, oat milk..." class="w-full rounded-xl border border-stone-300 px-3 py-2 bg-white" />
+          </div>
+        </div>
+      </div>
+
+      <div class="p-5 bg-stone-100 border-t border-stone-200 space-y-3">
+        <div class="flex justify-between items-center">
+          <span class="text-xs font-bold text-stone-600 uppercase">Total Bill Amount (No Extra Tax)</span>
+          <span id="modal-total-price" class="text-2xl font-extrabold text-espresso-950">₹0</span>
+        </div>
+        <button onclick="sendWhatsAppFoodOrder()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Send Order to Kitchen on WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CAFE_WHATSAPP = "919856701460";
+    document.getElementById('res-date').valueAsDate = new Date();
+
+    const menuData = [
+      { id: 101, name: "Khasi Mandarin Cold Brew", cat: "Coffee & Beverages", price: 170, veg: true, tag: "Signature", img: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80", desc: "18-hour steeped single-origin Arabica infused with fresh local mandarin zest." },
+      { id: 102, name: "Hazelnut Cortado & Cinnamon Foam", cat: "Coffee & Beverages", price: 160, veg: true, tag: "Bestseller", img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80", desc: "Double ristretto balanced with textured warm milk and roasted hazelnut." },
+      { id: 103, name: "Caramelized Banana & Berry Waffle", cat: "All-Day Breakfast", price: 240, veg: true, tag: "Must Try", img: "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&q=80", desc: "Crispy Belgian waffle topped with warm wildflower honey and whipped cream." },
+      { id: 104, name: "Smoked Herb Chicken & Egg Croissant", cat: "All-Day Breakfast", price: 260, veg: false, tag: "Chef Special", img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80", desc: "Flaky butter croissant stuffed with smoked chicken, scrambled eggs, and cheddar." },
+      { id: 105, name: "Wood-Fired Burrata & Basil Pesto Pizza", cat: "Wood-Fired & Mains", price: 390, veg: true, tag: "Fresh Oven", img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80", desc: "48-hour fermented sourdough crust with sun-dried tomatoes and fresh basil." },
+      { id: 106, name: "Spicy Peri-Peri Grilled Chicken Pasta", cat: "Wood-Fired & Mains", price: 340, veg: false, tag: "Hot & Creamy", img: "https://images.unsplash.com/photo-1621996346565-e3d5d6281298?auto=format&fit=crop&w=600&q=80", desc: "Penne tossed in roasted garlic rose sauce with chargrilled herb chicken." },
+      { id: 107, name: "Basque Burnt Cheesecake Slice", cat: "Artisan Bakery", price: 220, veg: false, tag: "Top Rated", img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80", desc: "Creamy caramelized cheesecake served with warm dark chocolate ganache." },
+      { id: 108, name: "Eggless Dark Chocolate Walnut Tart", cat: "Artisan Bakery", price: 190, veg: true, tag: "100% Veg", img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80", desc: "Rich 70% Belgian dark chocolate tart baked with toasted hill walnuts." }
+    ];
+
+    let activeCategory = "All";
+    let cart = {}; // { id: qty }
+    let orderMode = "Dine-In";
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.className = btn.dataset.cat === cat
+          ? "cat-btn shrink-0 bg-espresso-900 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition"
+          : "cat-btn shrink-0 bg-white border border-stone-200 text-stone-700 hover:bg-stone-100 text-xs font-bold px-4 py-2.5 rounded-xl transition";
+      });
+      renderMenu();
+    }
+
+    function renderMenu() {
+      const search = document.getElementById('menu-search').value.toLowerCase().trim();
+      const vegOnly = document.getElementById('veg-only').checked;
+      const grid = document.getElementById('menu-grid');
+
+      const filtered = menuData.filter(item => {
+        const matchCat = activeCategory === "All" || item.cat === activeCategory;
+        const matchVeg = !vegOnly || item.veg;
+        const matchSearch = !search || item.name.toLowerCase().includes(search) || item.desc.toLowerCase().includes(search);
+        return matchCat && matchVeg && matchSearch;
+      });
+
+      grid.innerHTML = filtered.map(item => {
+        const qty = cart[item.id] || 0;
+        const badgeColor = item.veg ? "border-emerald-600 text-emerald-700" : "border-red-600 text-red-700";
+        const dotColor = item.veg ? "bg-emerald-600" : "bg-red-600";
+
+        return `
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-between group">
+            <div>
+              <div class="relative h-48 overflow-hidden bg-stone-900">
+                <img
+                  src="${item.img}"
+                  onerror="this.src='https://placehold.co/600x400/3e2723/fbbf24?text=${encodeURIComponent(item.name)}'"
+                  alt="${item.name}"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+                <span class="absolute top-3 left-3 bg-espresso-950/90 text-amber-400 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full">${item.tag}</span>
+                <span class="absolute top-3 right-3 bg-white px-2 py-0.5 rounded-md text-[10px] font-bold border ${badgeColor} flex items-center gap-1 shadow">
+                  <span class="w-2 h-2 rounded-full ${dotColor}"></span> ${item.veg ? 'VEG' : 'NON-VEG'}
+                </span>
+              </div>
+              <div class="p-5">
+                <span class="text-[10px] font-bold uppercase text-stone-400">${item.cat}</span>
+                <h3 class="font-serif text-lg font-bold text-espresso-950 mt-0.5">${item.name}</h3>
+                <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">${item.desc}</p>
+              </div>
+            </div>
+
+            <div class="px-5 pb-5 pt-2 flex items-center justify-between border-t border-stone-100">
+              <span class="text-xl font-extrabold text-espresso-950">₹${item.price}</span>
+              ${qty === 0 ? `
+                <button onclick="changeQty(${item.id}, 1)" class="bg-terracotta-500 hover:bg-terracotta-600 text-white text-xs font-extrabold px-4 py-2.5 rounded-xl shadow-sm transition">
+                  + Add to Tray
+                </button>
+              ` : `
+                <div class="flex items-center gap-3 bg-espresso-900 text-white px-3 py-1.5 rounded-xl">
+                  <button onclick="changeQty(${item.id}, -1)" class="font-extrabold text-sm px-1.5 hover:text-amber-400">−</button>
+                  <span class="font-extrabold text-xs">${qty}</span>
+                  <button onclick="changeQty(${item.id}, 1)" class="font-extrabold text-sm px-1.5 hover:text-amber-400">+</button>
+                </div>
+              `}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      updateCartIndicators();
+    }
+
+    function changeQty(id, delta) {
+      const next = (cart[id] || 0) + delta;
+      if (next <= 0) {
+        delete cart[id];
+      } else {
+        cart[id] = next;
+      }
+      renderMenu();
+      renderModalCart();
+    }
+
+    function getCartTotals() {
+      let count = 0;
+      let total = 0;
+      Object.keys(cart).forEach(id => {
+        const item = menuData.find(m => m.id === Number(id));
+        if (item) {
+          count += cart[id];
+          total += item.price * cart[id];
+        }
+      });
+      return { count, total };
+    }
+
+    function updateCartIndicators() {
+      const { count, total } = getCartTotals();
+      document.getElementById('header-cart-count').textContent = count;
+      document.getElementById('bar-summary').textContent = `${count} Item(s) in Tray • ₹${total}`;
+      document.getElementById('modal-total-price').textContent = `₹${total}`;
+    }
+
+    function openCartModal() {
+      renderModalCart();
+      const modal = document.getElementById('cart-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeCartModal() {
+      const modal = document.getElementById('cart-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function renderModalCart() {
+      const container = document.getElementById('modal-cart-items');
+      const ids = Object.keys(cart);
+      if (!ids.length) {
+        container.innerHTML = `<p class="text-center text-stone-400 py-6 italic">Your order tray is empty. Add delicious items from the menu!</p>`;
+        updateCartIndicators();
+        return;
+      }
+
+      container.innerHTML = ids.map(id => {
+        const item = menuData.find(m => m.id === Number(id));
+        const qty = cart[id];
+        return `
+          <div class="py-3 flex justify-between items-center gap-3">
+            <div>
+              <p class="font-bold text-espresso-950">${item.name}</p>
+              <p class="text-xs text-stone-500">₹${item.price} × ${qty} = <strong>₹${item.price * qty}</strong></p>
+            </div>
+            <div class="flex items-center gap-2.5 bg-stone-100 px-2.5 py-1 rounded-xl border border-stone-200">
+              <button onclick="changeQty(${item.id}, -1)" class="font-extrabold text-sm px-1">−</button>
+              <span class="font-bold text-xs">${qty}</span>
+              <button onclick="changeQty(${item.id}, 1)" class="font-extrabold text-sm px-1">+</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+      updateCartIndicators();
+    }
+
+    function setOrderMode(mode) {
+      orderMode = mode;
+      const btnDine = document.getElementById('btn-dinein');
+      const btnTake = document.getElementById('btn-takeaway');
+      const boxTable = document.getElementById('table-input-box');
+      const boxTake = document.getElementById('takeaway-input-box');
+
+      if (mode === 'Dine-In') {
+        btnDine.className = "py-2.5 px-3 rounded-xl font-bold text-xs bg-espresso-900 text-white transition";
+        btnTake.className = "py-2.5 px-3 rounded-xl font-bold text-xs bg-white border border-stone-300 text-stone-700 transition";
+        boxTable.classList.remove('hidden');
+        boxTake.classList.add('hidden');
+      } else {
+        btnTake.className = "py-2.5 px-3 rounded-xl font-bold text-xs bg-espresso-900 text-white transition";
+        btnDine.className = "py-2.5 px-3 rounded-xl font-bold text-xs bg-white border border-stone-300 text-stone-700 transition";
+        boxTake.classList.remove('hidden');
+        boxTable.classList.add('hidden');
+      }
+    }
+
+    function sendWhatsAppFoodOrder() {
+      const { count, total } = getCartTotals();
+      if (!count) return alert("Please add at least one item to your order tray first.");
+
+      const custName = document.getElementById('order-cust-name').value.trim() || "Guest";
+      const note = document.getElementById('order-note').value.trim() || "None";
+      const modeDetail = orderMode === 'Dine-In'
+        ? document.getElementById('customer-table').value
+        : `Takeaway (Pickup: ${document.getElementById('pickup-time').value.trim() || 'ASAP'})`;
+
+      const lines = Object.keys(cart).map((id, idx) => {
+        const item = menuData.find(m => m.id === Number(id));
+        return `${idx + 1}. ${item.name} x${cart[id]} (₹${item.price * cart[id]})`;
+      }).join('%0A');
+
+      const msg = `*New Cafe Order - Cloudberry Roastery*%0A*Customer:* ${encodeURIComponent(custName)}%0A*Order Type:* ${encodeURIComponent(modeDetail)}%0A%0A*Items Ordered:*%0A${lines}%0A%0A*Cooking Note:* ${encodeURIComponent(note)}%0A*Total Bill:* ₹${total}`;
+      window.open(`https://wa.me/${CAFE_WHATSAPP}?text=${msg}`, '_blank');
+    }
+
+    function sendTableBooking(e) {
+      e.preventDefault();
+      const name = document.getElementById('res-name').value.trim();
+      const guests = document.getElementById('res-guests').value;
+      const date = document.getElementById('res-date').value;
+      const time = document.getElementById('res-time').value;
+      const note = document.getElementById('res-note').value.trim() || "Standard Table";
+
+      const msg = `*Table Reservation Request - Cloudberry Roastery*%0A*Guest Name:* ${encodeURIComponent(name)}%0A*Guests:* ${encodeURIComponent(guests)}%0A*Date:* ${date}%0A*Time:* ${time}%0A*Preference:* ${encodeURIComponent(note)}`;
+      window.open(`https://wa.me/${CAFE_WHATSAPP}?text=${msg}`, '_blank');
+    }
+
+    renderMenu();
+  </script>
+</body>
+</html>
